@@ -1,0 +1,50 @@
+doctype html
+/[if lt IE 7]
+  | <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7]
+  | <html class="no-js lt-ie10 lt-ie9 lt-ie8">
+/[if IE 8]
+  | <html class="no-js lt-ie10 lt-ie9">
+/[if IE 9]
+  | <html class="no-js lt-ie10">
+| <!--[if (gt IE 9)|!(IE)]<!-->
+html.nojs
+  | <!--<![endif]-->
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    title = yield_content(:title)
+    meta name="description" content="#{yield_content(:meta_description)}"
+    meta name="keywords" content="#{yield_content(:meta_keywords)}"
+    meta name="robots" content="index, follow"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    = stylesheet_link_tag 'application'
+
+    = javascript_include_tag 'vendor/modernizr.custom.65292.js'
+
+    /[if lt IE 7]
+      = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/dd_belatedpng/0.0.8/dd_belatedpng.min.js'
+
+  body class="#{yield_content(:body_classes)}"
+    #container
+      = partial 'partials/_header'
+      = partial 'partials/_nav'
+      section#content
+        == yield
+      = partial 'partials/_footer'
+
+    javascript:
+      yepnope({
+        load: '//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+        complete: function() {
+          yepnope({
+            test: window.jQuery != null,
+            nope: #{asset_path(:js, 'jquery/jquery.min').to_json},
+            complete: function() {
+              yepnope.injectJs(#{asset_path(:js, 'application').to_json});
+            }
+          })
+        }
+      })
+    = partial 'partials/_ga'
