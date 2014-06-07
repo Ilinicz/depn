@@ -20,7 +20,7 @@ configure :build do
   activate :relative_assets
   #activate :directory_indexes
   activate :asset_hash
-  activate :neat
+  #activate :neat
 
   activate :minify_css
   activate :minify_javascript
@@ -29,4 +29,9 @@ configure :build do
   # Change to your Google Analytics key (e.g. UA-XXXXX-Y)
   # To disable GA, leave unset or set to nil
   set :ga_key, nil
+
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
 end
