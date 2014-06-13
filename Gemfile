@@ -9,5 +9,9 @@ gem "middleman-deploy"
 # gem 'slim'
 gem 'haml'
 
-# Bootstrap
+# Bootstrap&FA
 gem 'bootstrap-sass'
+gem 'font-awesome-middleman'
+
+#Jquery
+gem "jquery-middleman"

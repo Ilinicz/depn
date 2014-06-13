@@ -3,6 +3,7 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :build_dir, 'www'
+set :fonts_dir,  "fonts"
 
 # Development
 configure :development do

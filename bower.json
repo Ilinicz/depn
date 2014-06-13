@@ -5,6 +5,7 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "jquery": "~> 1.10.2"
+    "jquery": "~> 1.10.2",
+    "jquery.easing": "~> 1.3"
   }
 }
