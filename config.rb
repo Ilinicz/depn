@@ -6,7 +6,7 @@ set :build_dir, 'www'
 
 # Development
 configure :development do
-  Slim::Engine.default_options[:pretty] = true
+#  Slim::Engine.default_options[:pretty] = true
   activate :livereload
 end
 

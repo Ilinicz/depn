@@ -6,7 +6,8 @@ gem 'middleman-livereload', '~> 3.1.0'
 gem 'middleman-sprockets', '3.3.2'
 gem "middleman-deploy"
 # Templating
-gem 'slim'
+# gem 'slim'
+gem 'haml'
 
 # Bootstrap
 gem 'bootstrap-sass'
