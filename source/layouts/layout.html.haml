@@ -32,5 +32,138 @@
     = yield
     = partial 'partials/_footer'
 
+    %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false", type: "text/javascript"}
+    :coffeescript
+      office = new google.maps.LatLng(55.721242, 37.572839)
+      myOptions =
+        zoom: 16
+        center: office
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        disableDefaultUI: true
+        styles: [
+          {
+            featureType: "landscape"
+            stylers: [
+              {
+                saturation: -100
+              }
+              {
+                lightness: 65
+              }
+              {
+                visibility: "on"
+              }
+            ]
+          }
+          {
+            featureType: "poi"
+            stylers: [
+              {
+                saturation: -100
+              }
+              {
+                lightness: 51
+              }
+              {
+                visibility: "on"
+              }
+            ]
+          }
+          {
+            featureType: "road.highway"
+            stylers: [
+              {
+                saturation: -100
+              }
+              {
+                visibility: "on"
+              }
+            ]
+          }
+          {
+            featureType: "road.arterial"
+            stylers: [
+              {
+                saturation: -100
+              }
+              {
+                lightness: 30
+              }
+              {
+                visibility: "on"
+              }
+            ]
+          }
+          {
+            featureType: "road.local"
+            stylers: [
+              {
+                saturation: -100
+              }
+              {
+                lightness: 40
+              }
+              {
+                visibility: "on"
+              }
+            ]
+          }
+          {
+            featureType: "transit"
+            stylers: [
+              {
+                saturation: 100
+              }
+              {
+                visibility: "on"
+              }
+            ]
+          }
+          {
+            featureType: "administrative.province"
+            stylers: [visibility: "off"]
+          }
+          {
+            featureType: "water"
+            elementType: "labels"
+            stylers: [
+              {
+                visibility: "on"
+              }
+              {
+                lightness: -25
+              }
+              {
+                saturation: -100
+              }
+            ]
+          }
+          {
+            featureType: "water"
+            elementType: "geometry"
+            stylers: [
+              {
+                hue: "#ffff00"
+              }
+              {
+                lightness: -25
+              }
+              {
+                saturation: -97
+              }
+            ]
+          }
+        ]
+
+      map = new google.maps.Map(document.getElementById("map"), myOptions)
+
+      marker = new google.maps.Marker(
+        position: office
+        map: map
+        draggable: true
+        title: "Комсомольский проспект, 42/3, офис 5"
+        animation: google.maps.Animation.DROP
+      )
+
 
     /= partial 'partials/_ga'
