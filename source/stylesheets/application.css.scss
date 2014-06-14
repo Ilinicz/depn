@@ -52,6 +52,18 @@ a {
   }
 }
 
+#site-header {
+  padding-top: 1%;
+  height: 22%;
+  background-color: $taupe;
+  color: $ceramic;
+  h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+
+}
+
 .light {
   font-weight: 400;
 }
@@ -69,6 +81,10 @@ a {
   &:focus {
     outline: 0;
   }
+}
+
+.navbar-text {
+  color: $ceramic;
 }
 
 .navbar-custom {
@@ -126,10 +142,15 @@ a {
   height: auto;
   padding: 100px 0;
   text-align: center;
+  background: url("../images/city2.jpg") no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+#dot-matrix {
+  background: url("http://s14.directupload.net/images/111129/44ga9qid.png");
 }
 
 .intro-body {
@@ -139,10 +160,15 @@ a {
 
 .brand-heading {
   font-size: 40px;
+  text-align: center;
+  color: $ceramic;
+  text-shadow: 1px 1px 1px $ceramic;
 }
 
 .intro-text {
   font-size: 18px;
+  color: $ceramic;
+  text-shadow: 1px 1px 1px $ceramic;
 }
 
 @media (min-width: 767px) {
@@ -151,7 +177,7 @@ a {
     padding: 0;
   }
   .brand-heading {
-    font-size: 100px;
+    font-size: 60px;
   }
   .intro-text {
     font-size: 25px;
