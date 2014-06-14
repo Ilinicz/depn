@@ -3,4 +3,5 @@
 #= require jquery
 #= require bootstrap
 #= require "_depn"
+#= require "_gmap"
 

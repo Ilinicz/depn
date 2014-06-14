@@ -15,3 +15,6 @@ gem 'font-awesome-middleman'
 
 #Jquery
 gem "jquery-middleman"
+
+#Better Colors
+gem "clrs"

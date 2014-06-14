@@ -17,6 +17,7 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1")
 
     = stylesheet_link_tag 'application'
+
     = javascript_include_tag 'application'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
     = javascript_include_tag 'vendor/modernizr.custom.65292.js'
@@ -24,7 +25,7 @@
     /[if lt IE 7]
       = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/dd_belatedpng/0.0.8/dd_belatedpng.min.js'
 
-  %body#page-top{"data-spy"=>"scroll", "data-target"=>".navbar-custom"}
+  %body#page-top.bg-ceramic{"data-spy"=>"scroll", "data-target"=>".navbar-custom"}
 
     /= partial 'partials/_header'
     = partial 'partials/_nav'
