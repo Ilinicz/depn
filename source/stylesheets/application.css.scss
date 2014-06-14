@@ -52,16 +52,39 @@ a {
   }
 }
 
-#site-header {
-  padding-top: 1%;
-  height: 22%;
-  background-color: $taupe;
+header {
   color: $ceramic;
-  h1 {
+  height: auto;
+  border-bottom: 10px solid $ceramic;
+  padding-top: 1%;
+  h3 {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin-bottom: 1%;
   }
 
+  i{
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    h3 {
+      font-size: 20px;
+      letter-spacing: normal;
+    }
+    i {
+      font-size: 30px;
+    }
+  }
+}
+#nav.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .light {
@@ -75,7 +98,9 @@ a {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: $taupe;
 }
-
+.navbar-static {
+  border-radius: 0;
+}
 .navbar-brand {
   font-weight: 700;
   &:focus {
@@ -142,7 +167,7 @@ a {
   height: auto;
   padding: 100px 0;
   text-align: center;
-  background: url("../images/city2.jpg") no-repeat bottom center scroll;
+  /*background: url("../images/city2.jpg") no-repeat bottom center scroll;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -161,13 +186,12 @@ a {
 .brand-heading {
   font-size: 40px;
   text-align: center;
-  color: $ceramic;
   text-shadow: 1px 1px 1px $ceramic;
 }
 
 .intro-text {
   font-size: 18px;
-  color: $ceramic;
+
   text-shadow: 1px 1px 1px $ceramic;
 }
 
@@ -356,4 +380,8 @@ img {
 
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  max-width: 940px;
 }
