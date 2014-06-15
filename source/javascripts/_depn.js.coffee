@@ -25,3 +25,27 @@ $ ->
 $ ->
   $("#nav").affix offset:
     top: $("header").height()
+
+
+#Parallax
+(->
+  $(document).ready ->
+    $window = undefined
+    $window = $(window)
+    $("section[data-type=\"background\"]").each ->
+      $scroll = undefined
+      $scroll = $(this)
+      $(window).scroll ->
+        coords = undefined
+        yPos = undefined
+        yPos = -($window.scrollTop() / $scroll.data("speed"))
+        coords = "50% " + yPos + "px"
+        $scroll.css backgroundPosition: coords
+
+  return
+).call this
+
+
+#Change opacity
+$ ->
+  $(".fadein").addClass "load"

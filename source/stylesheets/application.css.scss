@@ -12,6 +12,8 @@ body {
   height: 100%;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   color: $black;
+  background: url("../images/cream.png")
+
 }
 
 html {
@@ -171,8 +173,9 @@ footer {
 .intro {
   display: table;
   width: 100%;
-  
+  background: url("../images/bg4.jpg") no-repeat top left scroll;
   padding: 100px, 0;
+  margin-bottom: 0; 
   text-align: left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -180,18 +183,31 @@ footer {
   -o-background-size: cover;
 }
 
+.fadein.load {
+  opacity: 1;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-transition: opacity 0.55s ease-in;
+  -moz-transition: opacity 0.55s ease-in;
+  -o-transition: opacity 0.55s ease-in;
+  -ms-transition: opacity 0.55s ease-in;
+  transition: opacity 0.55s ease-in;
+}
+
 #dot-matrix {
   width: 100%;
   background: url("http://s14.directupload.net/images/111129/44ga9qid.png");
+  padding: 2%;
 }
 
 .intro-body {
   display: table-cell;
   vertical-align: middle;
   color: $ceramic;
-  padding-bottom: 250px;
+  padding-bottom: 100px;
   padding-top: 120px;
-  background: url("../images/bg4.jpg") no-repeat top left scroll;
 }
 
 .brand-heading {
@@ -209,7 +225,7 @@ footer {
     padding: 50px 0;
   }
   .intro-body {
-    padding-bottom: 150px;
+    padding-bottom: 50px;
   }
   .brand-heading {
     font-size: 60px;
@@ -292,6 +308,14 @@ footer {
   100% {
     -moz-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+.intro-motto {
+  padding-top: 3% ;
+  color: $ceramic;
+  h3 {
+    font-weight: 200;
   }
 }
 
