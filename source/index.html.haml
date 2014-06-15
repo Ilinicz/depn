@@ -1,13 +1,15 @@
 %section.intro
   .intro-body
-    .container
-      .row
-        .col-md-8.col-md-offset-2
-          %h1.brand-heading Департамент недвижимости
-          %p.intro-text второй московской городской коллегии адвокатов
-          .page-scroll
-            %a.btn.btn-circle{href: "#about"}
-              %i.fa.fa-angle-double-down.animated
+    #dot-matrix
+      .container
+        .row
+          .col-xs-9
+            %h1.brand-heading Департамент недвижимости 
+            %p.intro-text второй московской городской коллегии адвокатов
+          .col-xs-12.col-sm-1
+            .page-scroll
+              %a.btn.btn-circle{href: "#about"}
+                %i.fa.fa-angle-double-down.animated
 
 %section#about.container.content-section.text-center
   .row
@@ -18,24 +20,20 @@
       %p Все впереди. 
 
 
-%section#contact.container.content-section.text-center
+%section#contact.container.content-section
   .row
-    .col-lg-8.col-lg-offset-2
-      %h2 Наши контакты
-      %p адрес. телефон. bb
-      %p dep-n.ru
-      %ul.list-inline.banner-social-buttons
-        %li
-          %a.btn.btn-default.btn-lg{href: "#"}
-            %i.fa.fa-twitter.fa-fw
-            %span.network-name Twitter
-        %li
-          %a.btn.btn-default.btn-lg{href: "#"}
-            %i.fa.fa-github.fa-fw
-            %span.network-name Github
-        %li
-          %a.btn.btn-default.btn-lg{href: "#"}
-            %i.fa.fa-google-plus.fa-fw
-            %span.network-name Google+
-
-#map
+    .col-lg-12
+      %h2.text-center Контактная информация
+    .col-xs-6.col-xs-offset-1
+      #map
+    .col-xs-4.col-xs-offset-1
+      %p.contact
+      %br
+        %b Адрес:
+        Уличная ул. д3, 57, РФ
+      %br
+        %b Телефон:
+        8-(534)-434-44-44
+      %br
+        %b Email:
+        frfrfr@mail.ru
