@@ -203,7 +203,8 @@ footer {
 
 #dot-matrix {
   width: 100%;
-  background: url("http://s14.directupload.net/images/111129/44ga9qid.png");
+  background: url("../images/dot.png");
+  /*background: url("http://s14.directupload.net/images/111129/44ga9qid.png");*/
   padding: 2%;
 }
 
@@ -213,16 +214,19 @@ footer {
   color: $ceramic;
   padding-bottom: 100px;
   padding-top: 120px;
+
 }
 
 .brand-heading {
   font-size: 40px;
   font-weight: 300;
+
 }
 
 .intro-text {
   font-size: 18px;
   font-weight: 600;
+
 }
 
 @media (min-width: 767px) {
