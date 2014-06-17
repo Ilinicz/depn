@@ -19,14 +19,23 @@
       %h2.text-center Контактная информация
       .col-xs-8
         #map
-      .col-xs-1
-        %b Адрес:
-        %br
-        %br
-        %br
-        %b Телефон:
-      .col-xs-3
-        .contact 119048, Комсомольский прoспект, 42 стр. 3, офис 5
-        %br
-        .contact +7 (926) 994-53-92 
-        .contact +7 (926) 994-54-79
+
+      .col-xs-4
+        %address
+          %ul.list-unstyled
+            %li 
+              %strong 
+                %i.fa.fa-home
+                Адрес:
+              %dd 
+                119048 
+                %br Комсомольский прoспект 42, стр. 3, офис 5
+            %br  
+            %li 
+              %strong
+                %i.fa.fa-phone
+                Телефон:
+              %dd+7 (926) 994-53-92 
+              %dd+7 (926) 994-54-79
+
+
