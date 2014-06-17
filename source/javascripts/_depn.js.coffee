@@ -1,12 +1,12 @@
 
 
 #jQuery to collapse the navbar on scroll
-$(window).scroll ->
-  if $(".navbar").offset().top > 120
-    $(".navbar-static").addClass "top-nav-collapse"
-  else
-    $(".navbar-static").removeClass "top-nav-collapse"
-  return
+#$(window).scroll ->
+#  if $(".navbar").offset().top > 120
+#    $(".navbar-static").addClass "top-nav-collapse"
+#  else
+#    $(".navbar-static").removeClass "top-nav-collapse"
+#  return
 
 
 #jQuery for page scrolling feature - requires jQuery Easing plugin

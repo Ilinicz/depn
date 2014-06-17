@@ -17,8 +17,7 @@ body {
   height: 100%;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   color: $black;
-  background: url("../images/cream.png")
-
+  background: url("../images/cream.png");
 }
 
 html {
@@ -59,15 +58,19 @@ a {
   }
 }
 
-header {
+#site-header {
   color: $ceramic;
-  height: auto;
+  height: 110px;
   padding-top: 1%;
+  text-transform: uppercase;
+  border-bottom: 5px solid $ceramic;
   h3 {
-    text-transform: uppercase;
     font-size: 28px;
     letter-spacing: 5px;
     margin-bottom: 1%;
+  }
+  h4 {
+    font-weight: 200;
   }
 
   i{
@@ -76,10 +79,13 @@ header {
 }
 
 @media (max-width: 768px) {
-  header {
+  #site-header {
     h3 {
       font-size: 20px;
       letter-spacing: normal;
+    }
+    h4 {
+      font-size: 14px;
     }
     i {
       font-size: 30px;
@@ -90,6 +96,7 @@ header {
 footer {
   margin-top: 100px;
 }
+
 #nav.affix {
   position: fixed;
   top: 0;
@@ -107,7 +114,7 @@ footer {
   text-transform: uppercase;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 600;
-  background-color: $taupe;
+  background-color: $depnblue;
   text-align: center;
   vertical-align: middle;
 }
@@ -156,37 +163,41 @@ footer {
   }
 }
 
+.navbar {
+  .container{
+    max-width: 940px;
+  }
+}
+
 @media (min-width: 767px) {
   .navbar {
-    padding: 30px 0;
     border-bottom: 0;
     letter-spacing: 1px;
-    background-color: $taupe;
+    background-color: $depnblue;
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
   .top-nav-collapse {
-    padding: 0;
-    background-color: $taupe;
+    background-color: $depnblue;
   }
   .navbar-custom.top-nav-collapse {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
   }
 }
 
-.intro {
+/*.intro {
   display: table;
   width: 100%;
-  background: url("../images/city2.jpg") no-repeat top left scroll;
-  padding: 100px, 0;
-  margin-bottom: 0; 
+  /*background: url("../images/city2.jpg") no-repeat top left scroll;
+  margin-bottom: 100px; 
   text-align: left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
+*/
 
 .fadein.load {
   opacity: 1;
@@ -201,93 +212,8 @@ footer {
   transition: opacity 0.55s ease-in;
 }
 
-#dot-matrix {
-  width: 100%;
-  background: url("../images/dot.png");
-  /*background: url("http://s14.directupload.net/images/111129/44ga9qid.png");*/
-  padding: 2%;
-}
 
-.intro-body {
-  display: table-cell;
-  vertical-align: middle;
-  color: $ceramic;
-  padding-bottom: 100px;
-  padding-top: 120px;
 
-}
-
-.brand-heading {
-  font-size: 40px;
-  font-weight: 300;
-
-}
-
-.intro-text {
-  font-size: 18px;
-  font-weight: 600;
-
-}
-
-@media (min-width: 767px) {
-  .intro{
-    padding: 50px 0;
-  }
-  .intro-body {
-    padding-bottom: 50px;
-  }
-  .brand-heading {
-    font-size: 60px;
-  }
-  .intro-text {
-    font-size: 25px;
-  }
-}
-
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid #fff;
-  border-radius: 35px;
-  font-size: 40px;
-  color: #fff;
-  background: 0 0;
-  -webkit-transition: background .3s ease-in-out;
-  -moz-transition: background .3s ease-in-out;
-  transition: background .3s ease-in-out;
-  &:hover, &:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-  }
-}
-
-.page-scroll .btn-circle {
-  i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-  }
-  &:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-  }
-}
-
-.intro {
-  a {
-    color: #fff;
-  }
-}
 
 @-webkit-keyframes pulse {
   0 {
@@ -320,17 +246,10 @@ footer {
   }
 }
 
-.intro-motto {
-  padding-top: 3% ;
-  color: $ceramic;
-  h3 {
-    font-weight: 200;
-  }
-}
 
 
 .content-section {
-  padding-top: 50px;
+  padding-top: 190px;
 }
 
 .map {
@@ -345,7 +264,7 @@ footer {
 
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 100px;
+    padding-top: 190px;
   }
 
   #map {

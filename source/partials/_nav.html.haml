@@ -1,23 +1,32 @@
 #nav 
+  #site-header.bg-depndarkblue
+    .container
+      .row
+        .col-xs-2
+          %i.fa.fa-legal
+        .col-xs-8
+          %h3.text-center
+            Департамент недвижимости
+            
+          %h4.text-center  второй московской городской коллегии адвокатов
   .navbar.navbar-custom.navbar-static{role: "navigation"}
     .container
       .navbar-header.page-scroll
         %button.navbar-toggle{"data-target" => ".navbar-main-collapse", "data-toggle" => "collapse", type: "button"}
           %i.fa.fa-bars
-
+      /
         %a.navbar-brand{href: "#page-top"}
           %i.fa.fa-legal
   
       / Collect the nav links, forms, and other content for toggling
-      .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      .collapse.navbar-collapse.navbar-main-collapse
         %ul.nav.navbar-nav
           / Hidden li included to remove active class from about link when scrolled up past about section
-          %li.hidden
-            %a{href: "#page-top"}
+          /%li.hidden
+          /%a{href: "#page-top"}
           %li.page-scroll
             %a{href: "#about"} О компании
-          %li.page-scroll
-            %a{href: "#service"} Услуги
+        %ul.nav.navbar-nav.pull-right
           %li.page-scroll
             %a{href: "#contact"} Контакты
       / /.navbar-collapse
