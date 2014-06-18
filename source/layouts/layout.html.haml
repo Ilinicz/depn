@@ -11,10 +11,15 @@
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %title= yield_content(:title)
-    %meta(name="description" content="#{yield_content(:meta_description)}")
-    %meta(name="keywords" content="#{yield_content(:meta_keywords)}")
+    %meta(http-equiv='content-language' content="ru")
+    %meta(name='copyright' content="Департамент недвижимости второй московской городской коллегии адвокатов")
+    %meta(name="description" content="Департамент недвижимости второй московской городской коллегии аадвокатов. О компании, услуги, контактная информация, схема проезда.")
+    %meta(name="keywords" content="недвижимость, адвокат, коллегия, департамент, приватизация, наследство, прописка, консультация")
     %meta(name="robots" content="index, follow")
     %meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    %link{href: "../images/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+    %link{href: "../images/favicon.ico", rel: "icon", type: "image/x-icon"}/
 
     = stylesheet_link_tag 'application'
 
