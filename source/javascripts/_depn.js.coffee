@@ -49,3 +49,7 @@ $ ->
 #Change opacity
 $ ->
   $(".fadein").addClass "load"
+
+#withlove
+$ ->
+  $('#withlove').popover()

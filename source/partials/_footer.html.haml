@@ -1,10 +1,37 @@
-%footer#site-footer.bg-depnblue
+%footer#site-footer.bg-depndarkblue
   .container
-    .row.text-center
-      .col-lg-4
-        %p One
-      .col-lg-4
-        %p Two
-      .col-lg-4
-        %p Three
+    .row
+      .col-sm-12
+        %hr
+      .col-sm-4
+        %ul.list-unstyled
+          %li
+            %i.fa.fa-home
+            Комсомольский прoспект 42, стр. 3, офис 5 
+          %li
+            %i.fa.fa-phone
+            +7 (926) 994-53-92 | +7 (926) 994-54-79
+          %li
+            %i.fa.fa-globe
+            = link_to 'www.dep-n.ru', "http://dep-n.ru"
+
+      .col-sm-4.col-sm-offset-4
+        %ul.list-unstyled.go-right
+          %li
+            = link_to 'О компании', '#about'
+            %i.glyphicon.glyphicon-link
+          %li
+            = link_to 'Услуги', '#service'
+            %i.glyphicon.glyphicon-link
+          %li
+            = link_to 'Контакты', '#contact'
+            %i.glyphicon.glyphicon-link
+    %hr          
+  .container.copy
+    .row
+      .col-xs-10
+        © 2014 Департамент недвижимости второй московской городской коллегии адвокатов.
+      .col-xs-2.go-right
+        %a#withlove{'data-container'=>'body', 'data-toggle'=>'popover', 'data-placement'=>'top', 'data-content'=>"vk.com/id103234803 github.com/Ilinicz vilinicz@mail.ru", 'data-original-title'=>'By Vilinicz with love'} 
+          %i.fa.fa-spin.fa-cog.animated
 
