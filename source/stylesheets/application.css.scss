@@ -276,7 +276,6 @@ footer {
 #about {
   h2 {
     font-weight: 200;
-    
   }
 }
 
@@ -366,6 +365,12 @@ footer {
   a {
     color: $gray;
     &:visited {
+      color: $gray;
+    }
+    &:active {
+      color: $gray;
+    }
+    &:hover {
       color: $gray;
     }
   }
