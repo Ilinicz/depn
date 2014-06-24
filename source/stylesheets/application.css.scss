@@ -282,7 +282,13 @@ footer {
 #service {
   h2 {
     font-weight: 200;
-    
+  }
+
+  .panel {
+    color: $ceramic;
+    font-weight: 600;
+    line-height: 1.7;
+    font-size: 16px;
   }
 }
 .btn {
