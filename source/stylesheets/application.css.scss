@@ -202,18 +202,56 @@ footer {
   }
 }
 
-/*.intro {
-  display: table;
-  width: 100%;
-  /*background: url("../images/city2.jpg") no-repeat top left scroll;
-  margin-bottom: 100px; 
-  text-align: left;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../images/city.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    img {
+      padding-top: 15%;
+      width: 30%;
+    }
 }
-*/
+
+.intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.brand-heading {
+    font-size: 40px;
+}
+
+.intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:767px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+
+        img {
+          padding-top: 5%;
+        }
+    }
+
+    .brand-heading {
+        font-size: 100px;
+    }
+
+    .intro-text {
+        font-size: 25px;
+    }
+}
 
 .fadein.load {
   opacity: 1;
@@ -287,7 +325,7 @@ footer {
   .panel {
     color: $ceramic;
     font-weight: 600;
-    line-height: 1.7;
+    line-height: 1.5;
     font-size: 16px;
   }
 }

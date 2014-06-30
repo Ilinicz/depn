@@ -1,7 +1,15 @@
 - content_for :title do
   Департамент недвижимости второй московской городской академии адвокатов
 
-%section.intro.content-section#about
+%section.intro
+  .intro-body
+    .container
+      .row
+        .col-sm-12
+          = image_tag "../images/logo1alfa.png"
+
+
+%section.content-section#about
   .container
     .row
       .col-sm-12
@@ -49,22 +57,21 @@
           %br
 
       .col-sm-8.col-sm-offset-2
-        .panel.panel-default.bg-depnblue
-          .panel-body
-            %ul.list-unstyled
-              %h4.text-center
-                Дополнительно:
-              %li
-                %i.fa.fa-paperclip
-                Новостройки Москвы и Московской области. 
-                Вторичное жилье. Купля - продажа квартир, комнат, долей.
-              %li
-                %i.fa.fa-paperclip
-                Дачи, загородные дома. Земельные участки.
-              %li
-                %i.fa.fa-paperclip
-                Вся коммерческая недвижимость.
-                Бесплатные консультации!
+        %ul.list-unstyled.text-center
+          %li.panel.panel-default
+            .panel-body.bg-depnblue
+              /%i.fa.fa-paperclip
+              Новостройки Москвы и Московской области. 
+              Вторичное жилье. Купля - продажа квартир, комнат, долей.
+          %li.panel.panel-default
+            .panel-body.bg-depnblue
+              /%i.fa.fa-paperclip
+              Дачи, загородные дома. Земельные участки.
+          %li.panel.panel-default
+            .panel-body.bg-depnblue
+              /%i.fa.fa-paperclip
+              Вся коммерческая недвижимость.
+              Бесплатные консультации!
       .col-sm-12
         %hr      
 
