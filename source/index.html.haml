@@ -1,7 +1,7 @@
 - content_for :title do
   Департамент недвижимости второй московской городской академии адвокатов
 
-%section.intro
+%section.intro.fadein
   .intro-body
     .container
       .row
@@ -9,7 +9,9 @@
           = image_tag "../images/logo1alfa.png"
 
 
-%section.content-section#about
+
+
+%section.content-section#about{'data-type'=>'background', 'data-speed'=>'9'}
   .container
     .row
       .col-sm-12

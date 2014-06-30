@@ -209,12 +209,13 @@ footer {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../images/city.jpg) no-repeat bottom center scroll;
-    background-color: #000;
+    background: url(../images/city.jpg) no-repeat bottom center fixed;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+
     img {
       padding-top: 15%;
       width: 30%;
@@ -259,11 +260,11 @@ footer {
 
 .fadein {
   opacity: 0;
-  -webkit-transition: opacity 0.55s ease-in;
-  -moz-transition: opacity 0.55s ease-in;
-  -o-transition: opacity 0.55s ease-in;
-  -ms-transition: opacity 0.55s ease-in;
-  transition: opacity 0.55s ease-in;
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
 }
 
 
