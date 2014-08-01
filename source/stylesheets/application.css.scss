@@ -131,24 +131,12 @@ footer {
 }
 .navbar-brand {
   margin-top: -10%;
+  max-width: 60%;
   padding: 0;
-  text-align: none;
-  &:focus {
-    outline: 0;
-  }
-  
-  img {
-    margin: 0;
-    
-    height: 200%;
-  }
+}
 
-  .logo1{
-    float: right;
-  }
-  .logo2{
-    float: left
-  }
+.brown1 {
+  max-width: 70%;
 }
 .navbar-text {
   color: $ceramic;
@@ -419,6 +407,9 @@ footer {
       color: $gray;
     }
     &:hover {
+      color: $gray;
+    }
+    &:link {
       color: $gray;
     }
   }

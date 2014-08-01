@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='404 | Page Not Found' name='description'>
+    <title>404 | Page Not Found</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+    <link href='./blank-favicon.ico' rel='shortcut icon'>
+    <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <style>
+      * {
+              margin:0;
+              padding:0
+          }
+          html,body{
+              min-height: 100%;
+              height: 100%;
+              min-width: 100%;
+              background-color: #000;
+              overflow: hidden;
+          }    
+          body{
+              position:fixed;
+              font-family: 'PT Sans Narrow',Helvetica,Arial,Verdana,sans-serif;
+              visibility:visible;
+              top:0;
+              right:0;
+              left:0;
+              -webkit-font-smoothing:antialiased
+          }
+          #bg-fullscreen {
+              position: absolute;
+              -moz-opacity: 0;
+              opacity: 0;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-size: cover;
+              background-position: 50% 50%;
+              -webkit-transition: opacity 2s ease-in-out;
+                 -moz-transition: opacity 2s ease-in-out;
+                  -ms-transition: opacity 2s ease-in-out;
+                   -o-transition: opacity 2s ease-in-out;
+                      transition: opacity 2s ease-in-out;
+                      
+              -webkit-filter: blur(3px);
+                 -moz-filter: blur(3px);
+                   -o-filter: blur(3px);
+                  -ms-filter: blur(3px);
+                      filter: blur(3px);
+          }
+              #bg-fullscreen.show {
+                  -moz-opacity: 0.9;
+                  opacity: 0.9;
+              }
+          #content {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+          }
+              #content * {
+                  color: #fff;
+              }
+              #content h1 {
+                  font-size: 20em;
+                  text-shadow: 0px 0px 42px rgba(0, 0, 0, 1);
+              }
+              #content h3 {
+                  font-size: 5.4em;
+                  position: relative;
+                  top: -0.9em;
+                  text-shadow: 0px 0px 22px rgba(0, 0, 0, 1);
+                  -moz-opacity: 0.9;
+                  opacity: 0.9;
+              }
+              #content div.link{
+                  position: absolute;
+                  bottom: 80px;
+                  text-align: center;
+                  width: 100%;
+              }
+                  #content div a {
+                      display: inline-block;
+                      font-size: 3em;            
+                      position: relative;
+                      
+                      padding: 0 30px 5px 30px;
+                      background-color: #d63a0a;
+                      color: #fff;
+                      text-decoration: none;
+                      
+                      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+                         -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+                              box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+                  }
+                      #content a:hover {
+                          top: -1px;
+                      }
+                      #content a:active {
+                          top: +2px !important;
+                      }
+                  #content a.home {}
+      
+              @media only screen and (max-width: 1280px) {
+                  #content h1 {
+                      font-size: 13em;
+                  }
+                  
+                  #content h3 {
+                      font-size: 3.8em;
+                  }
+                  
+                  #content div a {
+                      font-size: 2em;            
+                  }
+              }
+              
+              @media only screen and (max-width: 479px) {
+                  #content h1 {
+                      font-size: 10em;
+                  }
+                  
+                  #content h3 {
+                      font-size: 2.8em;
+                  }
+                  
+                  #content div a {
+                      font-size: 1.4em;            
+                  }
+              }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <style>
+        #bg-fullscreen {
+            -moz-opacity: 0.9;
+            opacity: 0.9;
+            background-image: url('//habrastorage.org/files/7c1/dfc/c33/7c1dfcc3386347d0aa20b4f3cc1a410a.jpg');
+        }
+      </style>
+    </noscript>
+    <script src='//code.jquery.com/jquery-latest.min.js' type='text/javascript'></script>
+    <script>
+      $(document).ready(function (){
+          var imagesArray = [],
+              debug = true;
+          function getImagesFromTumblr(blogName, imgArr, imgCount, callback, makeOffset){
+              var offsetStep = 20,
+                  makeOffset = typeof makeOffset !== 'undefined' ? makeOffset : 0,
+                  imgCount = typeof imgCount !== 'undefined' ? imgCount : 5;
+              $.ajax({
+                  type: 'GET',
+                  // https://www.tumblr.com/docs/en/api/v2
+                  url : '//api.tumblr.com/v2/blog/'+ blogName +'.tumblr.com/posts',
+                  dataType: 'jsonp',
+                  data: {
+                      // https://www.tumblr.com/oauth/apps
+                      api_key: 'P1M2xgqzN8Q5V9Oh1eMp2a6V2YceKV5Z7FvlPZlWgDXvPT6AMs',
+                      offset:  makeOffset
+                      
+                  }, success: function (data) {
+                      if(debug) console.log('Makeing request with offset = %d', makeOffset);
+                      if(data.meta.status === 200) { // if answer is 'ok'
+                          $.each(data.response.posts, function(){
+                              if(this.type === 'photo') {
+                                  $.each(this.photos, function(){
+                                      var ext = this.original_size.url.split('.').pop(); // find image extension
+                                      if(
+                                          // check image for:
+                                          (ext === 'jpg') // 1. type - 'jpg'
+                                          && (this.original_size.width >= 640) // 2. minimal width
+                                          //&& (this.original_size.width > this.original_size.height) // 2. horizontal
+                                      ) {
+                                          if(imgArr.length < imgCount) {
+                                              imgArr.push(this);
+                                          }
+                                      }
+                                  });
+                              }
+                          });
+                      }
+                      // if array not full..
+                      if(imgArr.length < imgCount)
+                          // ..make a recrussive run
+                          getImagesFromTumblr(
+                              blogName, 
+                              imgArr, 
+                              imgCount, 
+                              callback,
+                              ((makeOffset === 0) ? offsetStep : makeOffset + offsetStep)
+                          )
+                      else
+                          if($.isFunction(callback)) callback(true);
+                          
+              }, error: function () {
+                  if(debug) console.error('Error try ajax request');
+                  if($.isFunction(callback)) callback(false);
+              }});
+          }
+          
+          // 'womenexcellence' - girls, +18
+          // 'life'            - black'n'white photos
+          // 'weirdvintage'    - weird vintage
+          // 'awesomepeoplehangingouttogether' - awesome people hanging out together
+          // 'meiguiceserra'   - space planets
+          
+          if(debug) console.time('Getting Tumblr Images Data');
+          getImagesFromTumblr('awesomepeoplehangingouttogether', imagesArray, 10, function(noerror){
+              if(debug) console.timeEnd('Getting Tumblr Images Data');
+              function getArrayItem(arr) {
+                  return arr[Math.floor(Math.random() * arr.length)];
+              }
+              function preloadImg(url, callback) {
+                  var pImg = new Image();
+                  pImg.onload = function() {
+                      if($.isFunction(callback)) callback(true);
+                  }
+                  pImg.src = url;
+              }
+      
+              if(debug) console.log(imagesArray);
+              if(imagesArray.length > 0) {
+                  
+                  var imageUrl = getArrayItem(imagesArray).original_size.url;
+                  if(debug) console.log('Random image url: %s', imageUrl);
+                  
+                  if(debug) console.time('Image downloading');
+                  preloadImg(imageUrl, function(){
+                      if(debug) console.timeEnd('Image downloading');
+                      $('#bg-fullscreen').css({
+                          'background-image': 'url('+ imageUrl +')'}).addClass('show');
+                  });
+              }
+          });
+          
+      });
+    </script>
+    <div id='bg-fullscreen'></div>
+    <div id='content'>
+      <h1>404</h1>
+      <h3>Not found</h3>
+      <div class='link'>
+        <a href="/">← На главную</a>
+      </div>
+    </div>
+  </body>
+</html>
