@@ -60,13 +60,13 @@ a {
 
 #site-header {
   color: $ceramic;
-  height: 100px;
+  height: 80px;
   padding-top: 1%;
   text-transform: uppercase;
   /*border-bottom: 5px solid $depnmilk;*/
   h3 {
     font-size: 28px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     margin-bottom: 1%;
   }
   h4 {
@@ -82,6 +82,21 @@ a {
 }
 
 @media (max-width: 768px) {
+  #site-header {
+    h3 {
+      font-size: 20px;
+      letter-spacing: normal;
+    }
+    h4 {
+      font-size: 14px;
+    }
+    i {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
   #site-header {
     h3 {
       font-size: 20px;
@@ -165,7 +180,7 @@ footer {
 
 .navbar-toggle {
   padding: 4px 6px;
-  font-size: 16px;
+  font-size: 20px;
   color: $ceramic;
   &:focus, &:active {
     outline: 0;
@@ -177,6 +192,7 @@ footer {
     max-width: 940px;
   }
 }
+
 
 @media (min-width: 767px) {
   .navbar {
@@ -190,6 +206,14 @@ footer {
   }
   .navbar-custom.top-nav-collapse {
     /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
+  }
+
+  .navbar-nav {
+
+  margin: 0 auto;
+  display: table;
+  table-layout: fixed;
+  float: none;
   }
 }
 
