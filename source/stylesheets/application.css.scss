@@ -66,8 +66,8 @@ a {
   /*border-bottom: 5px solid $depnmilk;*/
   h3 {
     font-size: 28px;
-    letter-spacing: 4px;
-    margin-bottom: 1%;
+    letter-spacing: 5px;
+    margin-bottom: 1%
   }
   h4 {
     font-weight: 200;
@@ -189,7 +189,7 @@ footer {
 
 .navbar {
   .nav-container{
-    max-width: 940px;
+    max-width: 620px;
   }
 }
 
@@ -207,13 +207,8 @@ footer {
   .navbar-custom.top-nav-collapse {
     /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
   }
-
-  .navbar-nav {
-
-  margin: 0 auto;
-  display: table;
-  table-layout: fixed;
-  float: none;
+  .navbar-nav>li {
+    float: none;
   }
 }
 

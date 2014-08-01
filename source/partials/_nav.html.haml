@@ -19,22 +19,16 @@
       .navbar-header.page-scroll
         %button.navbar-toggle{"data-target" => ".navbar-main-collapse", "data-toggle" => "collapse", type: "button"}
           %i.fa.fa-bars
-      /
-        %a.navbar-brand{href: "#about"}
-          = image_tag "../images/logo1alfa.png"
   
       / Collect the nav links, forms, and other content for toggling
       .collapse.navbar-collapse.navbar-main-collapse
-        %ul.nav.navbar-nav
+        %ul.nav.nav-justified.navbar-nav
           / Hidden li included to remove active class from about link when scrolled up past about section
           %li.hidden
             %a{href: "#page-top"}
           %li.page-scroll
-            %a{href: "#about"} О компании
+            %a{href: "#about"} O компании
           %li.page-scroll
             %a{href: '#service'} Услуги
           %li.page-scroll
             %a{href: "#contact"} Контакты
-
-      / /.navbar-collapse
-    / /.container
